@@ -1,0 +1,29 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#282A36"/>
+      <stop offset="1" stop-color="#191A21"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- App Icon Base Background -->
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="url(#grad)" />
+  
+  <!-- Top shutter button -->
+  <rect x="64" y="52" width="32" height="12" rx="4" fill="#6272A4" />
+
+  <!-- Camera Body / Window -->
+  <rect x="48" y="64" width="160" height="128" rx="20" fill="#44475A" />
+  
+  <!-- Flash / Mac Traffic Lights -->
+  <circle cx="72" cy="88" r="6" fill="#FF5F56" />
+  <circle cx="92" cy="88" r="6" fill="#FFBD2E" />
+  <circle cx="112" cy="88" r="6" fill="#27C93F" />
+  
+  <!-- Camera Lens -->
+  <circle cx="128" cy="128" r="44" fill="#282A36" stroke="#6272A4" stroke-width="8"/>
+  
+  <!-- Prompt inside Lens -->
+  <path d="M 112 116 L 124 128 L 112 140" stroke="#50FA7B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="132" y1="140" x2="148" y2="140" stroke="#FF79C6" stroke-width="6" stroke-linecap="round"/>
+</svg>

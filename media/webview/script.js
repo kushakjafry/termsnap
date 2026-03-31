@@ -130,7 +130,7 @@ function initTermSnap(initialData) {
     btnSave.textContent = "Exporting...";
     try {
       const dataUrl = await htmlToImage.toPng(captureArea, {
-        pixelRatio: 2,
+        pixelRatio: 4,
       });
       vscode.postMessage({ type: "save", dataUrl });
     } catch (err) {
@@ -147,7 +147,7 @@ function initTermSnap(initialData) {
     btnCopy.textContent = "Copying...";
     try {
       const dataUrl = await htmlToImage.toPng(captureArea, {
-        pixelRatio: 2,
+        pixelRatio: 4,
       });
 
       // Convert data URL to blob and use Clipboard API
@@ -163,7 +163,7 @@ function initTermSnap(initialData) {
       console.error("TermSnap clipboard error:", err);
       try {
         const dataUrl = await htmlToImage.toPng(captureArea, {
-          pixelRatio: 2,
+          pixelRatio: 4,
         });
         vscode.postMessage({ type: "copy", dataUrl });
       } catch (e) {
