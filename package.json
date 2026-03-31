@@ -1,0 +1,134 @@
+{
+  "name": "termsnap",
+  "displayName": "TermSnap",
+  "description": "Capture beautiful terminal screenshots",
+  "version": "0.0.1",
+  "publisher": "kushakjafry",
+  "icon": "media/icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kushakjafry/termsnap"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "termsnap.capture",
+        "title": "TermSnap: Capture Terminal Screenshot"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "termsnap.capture",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s",
+        "when": "terminalFocus && terminalHasBeenCreated"
+      }
+    ],
+    "configuration": {
+      "title": "TermSnap",
+      "properties": {
+        "termsnap.theme": {
+          "type": "string",
+          "default": "dracula",
+          "enum": [
+            "dracula",
+            "one-dark",
+            "monokai",
+            "solarized-dark",
+            "night-owl",
+            "github-dark",
+            "catppuccin-mocha",
+            "tokyo-night",
+            "gruvbox-dark",
+            "nord",
+            "solarized-light",
+            "custom"
+          ],
+          "enumDescriptions": [
+            "Dracula theme",
+            "One Dark theme",
+            "Monokai theme",
+            "Solarized Dark theme",
+            "Night Owl theme",
+            "GitHub Dark theme",
+            "Catppuccin Mocha theme",
+            "Tokyo Night theme",
+            "Gruvbox Dark theme",
+            "Nord theme",
+            "Solarized Light theme",
+            "Custom user-defined colors"
+          ],
+          "description": "Terminal screenshot theme"
+        },
+        "termsnap.fontSize": {
+          "type": "number",
+          "default": 14,
+          "minimum": 10,
+          "maximum": 24,
+          "description": "Font size for terminal text"
+        },
+        "termsnap.padding": {
+          "type": "number",
+          "default": 16,
+          "minimum": 0,
+          "maximum": 64,
+          "description": "Padding inside the terminal window"
+        },
+        "termsnap.showWindowControls": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show macOS-style window control dots"
+        },
+        "termsnap.showLineNumbers": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show line numbers in terminal output"
+        },
+        "termsnap.backgroundColor": {
+          "type": "string",
+          "default": "#1e1e2e",
+          "description": "Background color behind the terminal window"
+        },
+        "termsnap.customBackground": {
+          "type": "string",
+          "default": "#1e1e2e",
+          "description": "Custom theme: terminal background color"
+        },
+        "termsnap.customTextColor": {
+          "type": "string",
+          "default": "#f8f8f2",
+          "description": "Custom theme: text color"
+        },
+        "termsnap.customTitleBarColor": {
+          "type": "string",
+          "default": "#161616",
+          "description": "Custom theme: title bar color"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.11"
+  }
+}

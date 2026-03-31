@@ -1,0 +1,266 @@
+/* TermSnap — Carbon-style terminal screenshot themes */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--vscode-editor-background, #1e1e1e);
+  color: var(--vscode-editor-foreground, #ccc);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 16px;
+}
+
+/* ── Toolbar ─────────────────────────────────────────── */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  background: var(--vscode-sideBar-background, #252526);
+  border-radius: 8px;
+  border: 1px solid var(--vscode-widget-border, #444);
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.toolbar-group label {
+  white-space: nowrap;
+  color: var(--vscode-foreground, #ccc);
+}
+
+.toolbar-group select,
+.toolbar-group input[type="range"] {
+  accent-color: var(--vscode-focusBorder, #007acc);
+}
+
+.toolbar-group select {
+  background: var(--vscode-input-background, #3c3c3c);
+  color: var(--vscode-input-foreground, #ccc);
+  border: 1px solid var(--vscode-input-border, #555);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+.toolbar-group input[type="checkbox"] {
+  accent-color: var(--vscode-focusBorder, #007acc);
+}
+
+.toolbar-actions {
+  margin-left: auto;
+  gap: 8px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: var(--vscode-button-background, #007acc);
+  color: var(--vscode-button-foreground, #fff);
+}
+
+.btn-primary:hover {
+  background: var(--vscode-button-hoverBackground, #0062a3);
+}
+
+.btn-secondary {
+  background: var(--vscode-button-secondaryBackground, #3a3d41);
+  color: var(--vscode-button-secondaryForeground, #ccc);
+}
+
+.btn-secondary:hover {
+  background: var(--vscode-button-secondaryHoverBackground, #45494e);
+}
+
+/* ── Preview Container ───────────────────────────────── */
+
+.preview-container {
+  overflow-x: auto;
+  padding: 24px 0;
+}
+
+/* ── Outer Background (captured area) ────────────────── */
+
+.outer-background {
+  display: inline-block;
+  padding: 48px;
+  border-radius: 12px;
+  min-width: min-content;
+}
+
+/* ── Terminal Window ─────────────────────────────────── */
+
+.terminal-window {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 68px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  max-width: 100%;
+}
+
+/* ── Title Bar ───────────────────────────────────────── */
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--titlebar-bg);
+  user-select: none;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background: #ff5f57;
+}
+
+.dot-yellow {
+  background: #febc2e;
+}
+
+.dot-green {
+  background: #28c840;
+}
+
+.title-text {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.title-spacer {
+  width: 52px; /* balance the dots */
+}
+
+/* ── Terminal Body ───────────────────────────────────── */
+
+.terminal-body {
+  background: var(--bg-color);
+  min-height: 40px;
+}
+
+.terminal-body pre {
+  margin: 0;
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  color: var(--text-color);
+  white-space: pre;
+  line-height: 1.5;
+  tab-size: 4;
+  overflow-x: auto;
+}
+
+/* ── Line Numbers ────────────────────────────────────── */
+
+.line-number {
+  display: inline-block;
+  width: 3em;
+  text-align: right;
+  margin-right: 1em;
+  color: var(--text-color);
+  opacity: 0.3;
+  user-select: none;
+}
+
+/* ── Themes ──────────────────────────────────────────── */
+
+.theme-dracula {
+  --bg-color: #282a36;
+  --text-color: #f8f8f2;
+  --titlebar-bg: #21222c;
+}
+
+.theme-one-dark {
+  --bg-color: #282c34;
+  --text-color: #abb2bf;
+  --titlebar-bg: #21252b;
+}
+
+.theme-monokai {
+  --bg-color: #272822;
+  --text-color: #f8f8f2;
+  --titlebar-bg: #1e1f1c;
+}
+
+.theme-solarized-dark {
+  --bg-color: #002b36;
+  --text-color: #839496;
+  --titlebar-bg: #00212b;
+}
+
+.theme-night-owl {
+  --bg-color: #011627;
+  --text-color: #d6deeb;
+  --titlebar-bg: #010e1a;
+}
+
+.theme-github-dark {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --titlebar-bg: #010409;
+}
+
+.theme-catppuccin-mocha {
+  --bg-color: #1e1e2e;
+  --text-color: #cdd6f4;
+  --titlebar-bg: #181825;
+}
+
+.theme-tokyo-night {
+  --bg-color: #1a1b26;
+  --text-color: #a9b1d6;
+  --titlebar-bg: #13131e;
+}
+
+.theme-gruvbox-dark {
+  --bg-color: #282828;
+  --text-color: #ebdbb2;
+  --titlebar-bg: #1d2021;
+}
+
+.theme-nord {
+  --bg-color: #2e3440;
+  --text-color: #d8dee9;
+  --titlebar-bg: #272c36;
+}
+
+.theme-solarized-light {
+  --bg-color: #fdf6e3;
+  --text-color: #657b83;
+  --titlebar-bg: #eee8d5;
+}
+
+/* Custom theme — colors set via JS from user settings */
+.theme-custom {
+  --bg-color: var(--custom-bg);
+  --text-color: var(--custom-text);
+  --titlebar-bg: var(--custom-titlebar);
+}
