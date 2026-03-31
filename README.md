@@ -4,15 +4,31 @@ Capture beautiful, Carbon-style screenshots of your terminal output — directly
 
 ![TermSnap Preview](https://raw.githubusercontent.com/kushakjafry/termsnap/main/media/demo.png)
 
+## Why TermSnap?
+
+1. **Copy-pasting breaks formatting** — Paste a table into WhatsApp, Slack, Google Docs, or Word and the alignment is gone. Box-drawing characters break, columns misalign, structured output becomes an unreadable wall of text.
+
+2. **Screenshots can't capture long output** — Your platform's screenshot tool only captures what's visible on screen. If your table or log output extends beyond the viewport, you're stuck stitching multiple screenshots together.
+
+**TermSnap solves both** — select text in your terminal (no matter how long), press `Cmd+Shift+S`, and get a single styled screenshot of the entire output.
+
 ## Features
 
-- **One-shortcut capture** — Select text in the terminal, press `Cmd+Shift+S` (Mac) / `Ctrl+Shift+S` (Windows/Linux), and get a styled preview instantly
+- **One-shortcut capture** — Select terminal text, press `Cmd+Shift+S` (Mac) / `Ctrl+Shift+S` (Windows/Linux), and get a styled preview instantly
+- **Captures full selection** — Even hundreds of lines that don't fit on screen
 - **Carbon-style rendering** — Rounded window frame, macOS traffic light dots, subtle shadow, themed background
 - **11 built-in themes** — Dracula, One Dark, Monokai, Solarized Dark, Night Owl, GitHub Dark, Catppuccin Mocha, Tokyo Night, Gruvbox Dark, Nord, Solarized Light
 - **Custom themes** — Define your own background, text, and title bar colors
 - **Live preview controls** — Adjust theme, font size, padding, window chrome, and line numbers in real time
 - **Export options** — Save as PNG, copy image to clipboard, or copy raw text
 - **Preserves layout** — Tables, ASCII art, box-drawing characters, and alignment are fully preserved
+
+## Works great for
+
+- Tables, ASCII art, mermaid diagrams, flowcharts
+- Deployment logs and CLI output
+- Documentation, presentations, slides, blog posts
+- Anywhere plain text loses formatting when pasted
 
 ## Usage
 

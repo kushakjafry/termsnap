@@ -2,7 +2,7 @@
   "name": "termsnap",
   "displayName": "TermSnap",
   "description": "Capture beautiful terminal screenshots",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "kushakjafry",
   "icon": "media/icon.png",
   "license": "MIT",
